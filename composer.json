@@ -1,0 +1,17 @@
+{
+    "name": "sharikshaikh/laravel-transferwise",
+    "description": "It will allow easy integration with transferwise for making payouts",
+    "type": "library",
+    "require": {
+        "dmitry-kuchura/transferwise-api": "dev-master",
+        "laravel/framework": "^5.9@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sharik shaikh",
+            "email": "shaikhsharik709@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
