@@ -2,9 +2,11 @@
 namespace TransferWise\Test;
 
 use App\User;
+use GuzzleHttp\Client;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use TransferWise\Quote;
+use TransferWise\Test\Utilities\Mocks;
 use TransferWise\TransferWise;
 
 class TransferWiseTest extends TestCase {
@@ -23,14 +25,14 @@ class TransferWiseTest extends TestCase {
         $sourceCurrency     = 'USD';
         $recipientCurrency  = 'INR';
         $amount             = '1200'; // in cents. It's $12
+        $response = ['user' => 5466311];
 
+        $mock = Mocks::getHttpMock($response);
 
         $user  = factory(User::class)->create();
-        $quote = $user->transferWise()->getQuote($amount, $sourceCurrency, $recipientCurrency);
-
+        $quote = $user->transferWise($mock)->getQuote($amount, $sourceCurrency, $recipientCurrency);
         $this->assertNotNull($quote['id']);
     }
-
 
 
 

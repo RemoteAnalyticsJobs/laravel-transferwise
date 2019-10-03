@@ -3,7 +3,11 @@ namespace TransferWise;
 
 
 trait TransferWiseTrait {
-    public function transferWise() {
-        return new TransferWise();
+    /**
+     * @param null $httpMock
+     * @return TransferWise
+     */
+    public function transferWise($httpMock = null) {
+        return new TransferWise($httpMock);
     }
 }
