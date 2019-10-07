@@ -1,5 +1,5 @@
 {
-    "name": "sharikshaikh/laravel-transferwise",
+    "name": "sharik709/laravel-transferwise",
     "description": "It will allow easy integration with transferwise for making payouts",
     "type": "library",
     "require": {
