@@ -21,7 +21,6 @@ class TransferWiseAbstractTest extends TestCase {
         $this->instance = new TransferWiseAbstractMock;
     }
 
-
     /** @test */
     public function it_tests_if_http_connection_is_default_to_unirest_http_client_if_null_provided() {
     	$this->assertTrue(method_exists($this->instance, 'getHttpClient'));
