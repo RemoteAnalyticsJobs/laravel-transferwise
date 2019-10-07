@@ -3,7 +3,6 @@
     "description": "It will allow easy integration with transferwise for making payouts",
     "type": "library",
     "require": {
-        "laravel/framework": "^5.9@dev"
     },
     "license": "MIT",
     "autoload": {
