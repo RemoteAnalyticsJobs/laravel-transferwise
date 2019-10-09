@@ -25,7 +25,7 @@ class CurrencyBankInfoTest extends TestCase {
     /** @test */
     public function it_tests_if_with_country_name_it_returns_banking_information()
     {
-        $country = 'India';
+        $country = 'india';
         $response = CurrencyBankInfo::get($country);
         $this->assertContains('ifscCode', array_keys($response['details']));
     }
